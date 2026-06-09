@@ -1105,7 +1105,7 @@ function FinalCTASection() {
 export default function LandingPage() {
   useFadeUpObserver();
   return (
-    <>
+    <div style={{ width: '100%', minWidth: '100vw', margin: 0, padding: 0, boxSizing: 'border-box', overflowX: 'hidden' }}>
       <style>{GLOBAL_CSS}</style>
       <NavBar />
       <Ticker />
@@ -1119,6 +1119,6 @@ export default function LandingPage() {
       <TeachersSection />
       <StatsSection />
       <FinalCTASection />
-    </>
+    </div>
   );
 }
