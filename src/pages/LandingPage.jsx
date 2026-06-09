@@ -430,8 +430,8 @@ function LiveDemoSection() {
         </div>
 
         {tab === 'portfolio' && (
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
-            <ReignCard bg="#111A11" style={{ padding: '28px 32px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14, width: '100%', maxWidth: 'none' }}>
+            <ReignCard bg="#111A11" style={{ padding: '28px 32px', width: '100%' }}>
               <div style={{ fontSize: '0.75rem', fontWeight: 600, letterSpacing: '0.12em', color: 'rgba(255,255,255,0.4)', marginBottom: 8, textTransform: 'uppercase' }}>MY PORTFOLIO</div>
               <div style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', fontWeight: 700, color: '#fff', letterSpacing: '-0.02em', lineHeight: 1.0 }}>$10,892</div>
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 6 }}>
@@ -440,7 +440,7 @@ function LiveDemoSection() {
               </div>
             </ReignCard>
             {DEMO_STOCKS.map(s => (
-              <ReignCard key={s.sym} accent={s.up ? C.green : C.red} bg="#111A11" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px 28px' }}>
+              <ReignCard key={s.sym} accent={s.up ? C.green : C.red} bg="#111A11" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '18px 28px', width: '100%' }}>
                 <div>
                   <div style={{ fontWeight: 700, fontSize: '1.125rem', color: '#fff', letterSpacing: '0.02em', lineHeight: 1.3 }}>{s.sym}</div>
                   <div style={{ fontSize: '0.75rem', color: 'rgba(255,255,255,0.4)', marginTop: 2, fontWeight: 600, letterSpacing: '0.12em', textTransform: 'uppercase' }}>{s.name}</div>
@@ -611,7 +611,7 @@ function LeaderboardSection() {
       padding: '120px 64px', background: '#090D09',
       backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(232,184,75,0.08) 0%, transparent 70%)',
     }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <div style={{ maxWidth: 'min(1600px, 90vw)', margin: '0 auto' }}>
         <div style={{ maxWidth: 740, margin: '0 auto 64px', textAlign: 'center' }}>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
             Your entire class.<br />One leaderboard.
@@ -664,7 +664,7 @@ function PredictionSection() {
 
   return (
     <section style={{ padding: '120px 64px', background: '#080C08' }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="two-col">
+      <div style={{ maxWidth: 'min(1600px, 90vw)', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="two-col">
         <div ref={ref} style={{ opacity: inView ? 1 : 0, transform: inView ? 'translateX(0)' : 'translateX(-28px)', transition: 'all 0.6s ease' }}>
           <SectionLabel>HOW IT WORKS</SectionLabel>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 24 }}>
@@ -804,7 +804,7 @@ function UnlockSection() {
   const [ref, inView] = useInView(0.15);
   return (
     <section style={{ padding: '120px 64px', background: '#080C08' }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <div style={{ maxWidth: 'min(1600px, 90vw)', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 80 }}>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
             The longer you play,<br />the more you unlock.
@@ -949,7 +949,7 @@ function TeachersSection() {
 
   return (
     <section style={{ padding: '120px 64px', background: '#090D09' }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
+      <div style={{ maxWidth: 'min(1600px, 90vw)', margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <SectionLabel color={C.gold}>FOR TEACHERS</SectionLabel>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
@@ -993,7 +993,7 @@ function StatsSection() {
 
   return (
     <section style={{ background: '#0A2A1A', padding: '120px 64px' }}>
-      <div ref={ref} style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, textAlign: 'center' }} className="stats-grid">
+      <div ref={ref} style={{ maxWidth: 'min(1600px, 90vw)', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, textAlign: 'center' }} className="stats-grid">
         {[
           { val: s1.toLocaleString(), label: 'Students' },
           { val: s2.toLocaleString(), label: 'Predictions Made' },
