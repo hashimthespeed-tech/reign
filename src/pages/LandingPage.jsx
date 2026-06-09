@@ -311,8 +311,8 @@ function HeroSection() {
       minHeight: '100vh',
       background: '#080C08',
       backgroundImage: `
-        radial-gradient(ellipse 70% 50% at 50% 30%, rgba(0,232,122,0.12) 0%, transparent 70%),
-        radial-gradient(ellipse 40% 30% at 50% 10%, rgba(232,184,75,0.06) 0%, transparent 60%)
+        radial-gradient(ellipse 90% 60% at 50% 30%, rgba(0,232,122,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 40% at 50% 10%, rgba(232,184,75,0.06) 0%, transparent 60%)
       `,
       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       textAlign: 'center', padding: '120px 64px 80px', position: 'relative',
@@ -609,9 +609,9 @@ function LeaderboardSection() {
   return (
     <section style={{
       padding: '120px 64px', background: '#090D09',
-      backgroundImage: 'radial-gradient(ellipse 60% 40% at 50% 20%, rgba(232,184,75,0.08) 0%, transparent 70%)',
+      backgroundImage: 'radial-gradient(ellipse 80% 50% at 50% 20%, rgba(232,184,75,0.08) 0%, transparent 70%)',
     }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ maxWidth: 740, margin: '0 auto 64px', textAlign: 'center' }}>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
             Your entire class.<br />One leaderboard.
@@ -664,7 +664,7 @@ function PredictionSection() {
 
   return (
     <section style={{ padding: '120px 64px', background: '#080C08' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="two-col">
+      <div style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }} className="two-col">
         <div ref={ref} style={{ opacity: inView ? 1 : 0, transform: inView ? 'translateX(0)' : 'translateX(-28px)', transition: 'all 0.6s ease' }}>
           <SectionLabel>HOW IT WORKS</SectionLabel>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 24 }}>
@@ -804,7 +804,7 @@ function UnlockSection() {
   const [ref, inView] = useInView(0.15);
   return (
     <section style={{ padding: '120px 64px', background: '#080C08' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 80 }}>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
             The longer you play,<br />the more you unlock.
@@ -949,7 +949,7 @@ function TeachersSection() {
 
   return (
     <section style={{ padding: '120px 64px', background: '#090D09' }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 1400, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <SectionLabel color={C.gold}>FOR TEACHERS</SectionLabel>
           <h2 className="fade-up" style={{ fontWeight: 700, fontSize: 'clamp(1.75rem, 3.5vw, 3rem)', color: '#fff', lineHeight: 1.15, letterSpacing: '-0.01em', marginBottom: 14 }}>
@@ -993,7 +993,7 @@ function StatsSection() {
 
   return (
     <section style={{ background: '#0A2A1A', padding: '120px 64px' }}>
-      <div ref={ref} style={{ maxWidth: 1200, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, textAlign: 'center' }} className="stats-grid">
+      <div ref={ref} style={{ maxWidth: 1400, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 40, textAlign: 'center' }} className="stats-grid">
         {[
           { val: s1.toLocaleString(), label: 'Students' },
           { val: s2.toLocaleString(), label: 'Predictions Made' },
@@ -1024,7 +1024,7 @@ function FinalCTASection() {
   return (
     <section style={{
       minHeight: '100vh', background: '#080C08',
-      backgroundImage: 'radial-gradient(circle 500px at 50% 40%, rgba(0,232,122,0.1) 0%, transparent 70%)',
+      backgroundImage: 'radial-gradient(circle 700px at 50% 40%, rgba(0,232,122,0.1) 0%, transparent 70%)',
       display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
       padding: '80px 64px', textAlign: 'center',
     }}>
