@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   Crown, TrendingUp, TrendingDown, Trophy, Sparkles,
   Flame, Zap, Lock, Target, CheckCircle, AlertCircle,
@@ -243,6 +244,7 @@ function SectionLabel({ children, color = C.green }) {
 /* ─── NavBar ─── */
 function NavBar() {
   const [scrolled, setScrolled] = useState(false);
+  const navigate = useNavigate();
   useEffect(() => {
     const h = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', h);
@@ -261,8 +263,8 @@ function NavBar() {
     }}>
       <Logo size={22} />
       <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-        <button className="btn-outline" style={{ padding: '8px 18px', fontSize: 13 }}>Create Class</button>
-        <button className="btn-gold" style={{ padding: '8px 18px', fontSize: 13 }}>Join Class</button>
+        <button className="btn-outline" onClick={() => navigate('/onboarding/teacher')} style={{ padding: '8px 18px', fontSize: 13 }}>Create Class</button>
+        <button className="btn-gold" onClick={() => navigate('/onboarding')} style={{ padding: '8px 18px', fontSize: 13 }}>Join Class</button>
       </div>
       {/* FIX 8 — gradient separator line */}
       <div style={{
@@ -306,6 +308,7 @@ function Ticker() {
 
 /* ─── Section 1: Hero ─── */
 function HeroSection() {
+  const navigate = useNavigate();
   return (
     <section style={{
       minHeight: '100vh',
@@ -341,8 +344,8 @@ function HeroSection() {
       </p>
 
       <div className="fade-up fade-up-delay-2" style={{ display: 'flex', gap: 14, flexWrap: 'wrap', justifyContent: 'center' }}>
-        <button className="btn-gold">Join Your Class</button>
-        <button className="btn-outline">Create a Class</button>
+        <button className="btn-gold" onClick={() => navigate('/onboarding')}>Join Your Class</button>
+        <button className="btn-outline" onClick={() => navigate('/onboarding/teacher')}>Create a Class</button>
       </div>
     </section>
   );

@@ -7,6 +7,7 @@ import Leaderboard from './pages/Leaderboard'
 import MonthlyReport from './pages/MonthlyReport'
 import Learning from './pages/Learning'
 import TeacherDashboard from './pages/TeacherDashboard'
+import TeacherOnboarding from './pages/TeacherOnboarding'
 import Settings from './pages/Settings'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/onboarding" element={<Onboarding />} />
+        <Route path="/onboarding/teacher" element={<TeacherOnboarding />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
